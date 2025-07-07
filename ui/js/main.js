@@ -74,7 +74,7 @@ $(async function () {
 				<div class="subtitle">${neww.subtitle}</div>
 			</div>
 			<div class="desc">${neww.description}</div>
-			<div class="new-img" onclick="location.href='/ui/card/index.html'" style="cursor: pointer;">
+			<div class="new-img" onclick="location.href='../index.html'" style="cursor: pointer;">
 
 				<img src="assets/img/news-images/${neww.image}">
 			</div>
