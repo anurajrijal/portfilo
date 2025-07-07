@@ -1,0 +1,74 @@
+{
+    "Keys": [
+		{
+            "key": "J",
+            "title": "JavaScript",
+            "description": "JavaScript"
+        },
+        {
+            "key": "N",
+            "title": "Node JS",
+            "description": "Move your character to the left."
+        },
+        {
+            "key": "R",
+            "title": "React",
+            "description": "Move your character backward."
+        },
+        {
+            "key": "H",
+            "title": "HTML",
+            "description": "Move your character to the right."
+        },
+        {
+            "key": "C",
+            "title": "CSS",
+            "description": "Sprint while moving."
+        },
+        {
+            "key": "E",
+            "title": "Express",
+            "description": "Make your character jump."
+        },
+        {
+            "key": "M",
+            "title": "MongoDB",
+            "description": "Interact with shops, NPCs, or server-specific actions."
+        },
+        {
+            "key": "G",
+            "title": "GitHub",
+            "description": "Open third eye/interaction system for contextual actions in roleplay."
+        },
+        {
+            "key": "D",
+            "title": "Docker",
+            "description": "Open chatbox for commands or messages."
+        }
+    ],
+
+    "News": [
+		{
+			"title": "Projects ",
+			"subtitle": "Card",
+			"description": "Card with social links",
+			"image": "new.png"
+		}
+	],
+
+	"Authors": [
+		{
+            "name": "Anuraj Rijal",
+            "rank": "Backend Developer",
+            "image": "us.png"
+        }
+	],
+
+    "Music": [
+        {
+            "songname": "Spirit",
+            "owner": "Spirit BGM",
+            "path": "music/music.mp3" 
+        }
+    ]
+}
