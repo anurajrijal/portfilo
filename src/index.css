@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Only the things Tailwind utilities can't express live here:
+   custom cursors, page background, and scrollbar styling. */
+@layer base {
+  :root {
+    --cur-arrow: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><polygon points='3,3 25,11 15,15 11,25' fill='%237fc4d6' fill-opacity='.35' stroke='white' stroke-width='2.5' stroke-linejoin='round'/></svg>") 3 3, default;
+    --cur-hand: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><polygon points='3,3 25,11 15,15 11,25' fill='%23f0a23c' fill-opacity='.35' stroke='white' stroke-width='2.5' stroke-linejoin='round'/></svg>") 3 3, pointer;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html {
+    height: 100%;
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+  }
+  html,
+  body {
+    cursor: var(--cur-arrow);
+  }
+  body {
+    @apply m-0 h-full overflow-auto font-mono text-[15px] leading-normal text-ink;
+    background-color: #050a14;
+    background-image: radial-gradient(ellipse at 50% -10%, #0f2740 0, transparent 60%),
+      radial-gradient(ellipse at 50% 120%, #081425, transparent 60%);
+  }
+  #root {
+    @apply min-h-full;
+  }
+  button,
+  a,
+  input,
+  [role='button'] {
+    cursor: var(--cur-hand);
+  }
+
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background: linear-gradient(90deg, #070d16 0 6px, #2a4150 6px 7px, #070d16 7px);
+    border-left: 1px solid #1f4256;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#a9b5c3 0 3px, #6b7a8c 3px calc(100% - 3px), #a9b5c3 calc(100% - 3px));
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#cfe0e6 0 3px, #8a9bb0 3px calc(100% - 3px), #cfe0e6 calc(100% - 3px));
+    background-clip: padding-box;
+  }
+  @supports (-moz-appearance: none) {
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #6b7a8c #070d16;
+    }
+  }
+}
