@@ -1,11 +1,23 @@
-import { useMemo } from 'react';
-import { EXAM_DATE } from '../data';
+import { useMemo } from "react";
+import { EXAM_DATE } from "../data";
 
 function examInfo() {
-  const t = new Date(EXAM_DATE + 'T00:00:00');
-  const exd = isNaN(t) ? '--' : t.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  const t = new Date(EXAM_DATE + "T00:00:00");
+  const exd = isNaN(t)
+    ? "--"
+    : t.toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
   const d = Math.ceil((t - new Date()) / 864e5);
-  const cd = isNaN(d) ? 'Set date in code' : d < 0 ? 'Exam date passed' : d === 0 ? 'Exam day' : d + ' days left';
+  const cd = isNaN(d)
+    ? "Set date in code"
+    : d < 0
+      ? "Exam date passed"
+      : d === 0
+        ? "Exam day"
+        : d + " days left";
   return { exd, cd };
 }
 
@@ -18,7 +30,7 @@ export default function ProfileCard({ labsDone, onInfo }) {
         <div className="grid h-[52px] w-[52px] place-items-center rounded border border-line bg-[#1b2b3a] after:h-[22px] after:w-[22px] after:rounded-full after:border-2 after:border-[#9aa9b3] after:content-['']" />
         <div className="flex-1">
           <span>
-            CCNA{' '}
+            CCNA{" "}
             <button
               type="button"
               aria-label="Cisco certification details"
@@ -29,12 +41,14 @@ export default function ProfileCard({ labsDone, onInfo }) {
             </button>
           </span>
           <br />
-          <b className="text-[15px] text-hi">YOUR_HANDLE-0001</b>
+          <b className="text-[15px] text-hi">anuraj-0001</b>
         </div>
         <div className="text-right">
           <span>LABS DONE</span>
           <br />
-          <span className="rounded-[3px] bg-ok px-1.5 py-px text-[11px] font-bold text-[#06121b]">SIM</span>{' '}
+          <span className="rounded-[3px] bg-ok px-1.5 py-px text-[11px] font-bold text-[#06121b]">
+            SIM
+          </span>{" "}
           <span className="text-[15px] text-ok">{labsDone} / 3</span>
         </div>
       </div>

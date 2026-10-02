@@ -22,7 +22,7 @@ export const FILES = [
           I&apos;m Anuraj Rijal, studying for the Cisco CCNA (200-301). I build
           and troubleshoot networks in labs: VLANs, routing, ACLs, and wireless.
         </p>
-        <p>Replace this with your story and goals.</p>
+        <p>Just trying to be better.</p>
       </>
     ),
   },
